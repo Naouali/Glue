@@ -2,9 +2,9 @@
 
 
 /**
- * concate - function to concate two strings
+ * concate - function to concate two strings to create the snapfile's name
  * @first: first string
- * second: second string to add to the first
+ * @second: second string to add to the first
  * Return: new string
  */
 
@@ -19,11 +19,14 @@ char * concate(char *first, char *second)
     }
     first[i] = '/';
     i++;
+    first[i] = '1';
+    i++;
     for (j = 0; second[j] != '\0'; j++)
     {
         first[i] = second[j];
         i++;
     }
+    i++;
     first[i] = '\0';
     return (first);
 }

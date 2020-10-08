@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include "glue.h"
 
+/**
+ * copy - function to copy a file into another file
+ * @filename: file to be copied
+ * @dirname: directory in which to output the copy
+ * Return: Nothing
+ */
+ 
 void copy(char *filename, char *dirname)
 {
     FILE * file_to_read;

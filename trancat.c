@@ -2,8 +2,9 @@
 
 
 /**
- * trancat - function to trancat filean directories names
- * @filename: string
+ * trancat - function to trancat filename and make it directories names
+ * @dest: output of the copied name
+ * @source: original filename
  * return: new trancated name
  */
 
