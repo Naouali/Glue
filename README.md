@@ -15,3 +15,6 @@ Retrieve a specific function based on the number of copies, or the name of messa
 - put this copy in a hidden directory
 
     CHECK if it possible to push to github using the github api
+
+snap every file to a hidden direcoctoy with the same name as the file
+and create a number to determine which version of that file it is
