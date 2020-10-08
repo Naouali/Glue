@@ -13,3 +13,5 @@ Retrieve a specific function based on the number of copies, or the name of messa
 - function to be created for now
 - copy function to (take a snape /copy of a program/file)
 - put this copy in a hidden directory
+
+    CHECK if it possible to push to github using the github api

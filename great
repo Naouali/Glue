@@ -1,18 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "glue.h"
 
 
-int main(int argc, char **argv)
+void copy(char *filename)
 {
-    /* initialize empty file object */
-    char *filename = argv[1];
-    /* initialize empty string to hold copy of a file (snap) */
-    char *snapname;
-    char *hold;
+    FILE * file_to_read;
+    FILE *file_to_write;
+    char c;
 
-    snapname = trancat(hold, filename);
-    make_dir(snapname);
-    copy(filename);
-    return (0);
+
+    file_to_read = fopen(filename, "r");
+    file_to_write = fopen("great", "w+");
+    while ((c=fgetc(file_to_read)) != EOF)
+    {
+        fputc(c, file_to_write);
+    }
+    fclose(file_to_read);
+    fclose(file_to_write);
 }
