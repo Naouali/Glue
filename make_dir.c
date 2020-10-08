@@ -16,6 +16,6 @@ int make_dir(char *pathname)
 {
     int check;
     check = mkdir(pathname, 0777);
-    printf("%s\n", pathname);
+    
     return 0;
 }
