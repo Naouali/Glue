@@ -1,5 +1,10 @@
-#ifndef HEADER
-#define HEADER
-void copy(char *filename);
+#ifndef __HEADER__
+#define __HEADER__
 
-#endif
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+void copy(char *filename);
+int make_dir(char *pathname);
+char * trancat(char *dest, char *source);
+#endif 

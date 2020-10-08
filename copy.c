@@ -10,7 +10,7 @@ void copy(char *filename)
 
 
     file_to_read = fopen(filename, "r");
-    file_to_write = fopen("new", "w+");
+    file_to_write = fopen("great", "w+");
     while ((c=fgetc(file_to_read)) != EOF)
     {
         fputc(c, file_to_write);
