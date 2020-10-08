@@ -18,4 +18,10 @@ Retrieve a specific function based on the number of copies, or the name of messa
 
 snap every file to a hidden direcoctoy with the same name as the file
 and create a number to determine which version of that file it is
+<h1>
+done with creating the n snap, time to create the restore function
 
+LOGIC:
+in the snaping logic; we marked th first snap with its number 1
+so the logic is retirive first this number and increment it evry time
+we can retrive all the number of files in th hidden directory
