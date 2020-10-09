@@ -16,7 +16,7 @@ char * concate(char *first, char *second)
     int i, j;
     i = 0;
     int number_of_folders = 0;
-    char number_of_files[20];
+    char number_of_files[1000];
     char *hold_int;
 
     /* loop throw th directory */

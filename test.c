@@ -3,11 +3,11 @@
 
 int main()
 {
-    char s1[] = "hello";
-    char s2[] = "world";
+    char *s1 = "mainc";
+    char *s2 ;
     char *new;
 
-    new = concate(s1, s2);
+    new = gen_dirname(s2, s1);
     printf("%s\n", new);
 
     return 0;

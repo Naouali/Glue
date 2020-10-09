@@ -13,5 +13,6 @@ int make_dir(char *pathname);
 char * trancat(char *dest, char *source);
 char *concate(char *first, char *second);
 char *my_itoa(int num, char *str);
+char *gen_dirname(char *hold_var, char *filename);
 
 #endif 
