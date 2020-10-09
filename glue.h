@@ -14,5 +14,8 @@ char * trancat(char *dest, char *source);
 char *concate(char *first, char *second);
 char *my_itoa(int num, char *str);
 char *gen_dirname(char *hold_var, char *filename);
+char *gen_snapname(char *filename, int version);
+char *gen_fullpath(char *filename, int version, char *hold_var);
+char *_strcat(char *dest, char *src);
 
 #endif 

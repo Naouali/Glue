@@ -3,12 +3,12 @@
 
 int main()
 {
-    char *s1 = "mainc";
-    char *s2 ;
-    char *new;
-
-    new = gen_dirname(s2, s1);
-    printf("%s\n", new);
-
+    char *s1= "main.c";
+    char *dir;
+    int v = 5;
+    char *hold;
+    
+    dir = gen_fullpath(s1, v, hold);
+    printf("%s\n", dir);
     return 0;
 }
