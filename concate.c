@@ -29,7 +29,6 @@ char * concate(char *first, char *second)
             number_of_folders++;
     }
     closedir(dp);
-    printf("%d\n", number_of_folders);
     hold_int = my_itoa(number_of_folders, number_of_files);
     while (first[i] != '\0')
     {
@@ -37,7 +36,7 @@ char * concate(char *first, char *second)
     }
     first[i] = '/';
     i++;
-    first[i] = *hold_int;
+    first[i] = *hold_int - 1;
     i++;
     for (j = 0; second[j] != '\0'; j++)
     {
@@ -46,5 +45,6 @@ char * concate(char *first, char *second)
     }
     i++;
     first[i] = '\0';
+    printf("Snap created successfully!\n");
     return (first);
 }

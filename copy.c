@@ -18,7 +18,6 @@ void copy(char *filename, char *dirname)
 
 
     pathname = concate(dirname, filename);
-    printf("%s\n", pathname);
     file_to_read = fopen(filename, "r");
     file_to_write = fopen(dirname, "w+");
     while ((c=fgetc(file_to_read)) != EOF)
