@@ -14,8 +14,12 @@
 
 int make_dir(char *pathname)
 {
-    int check;
-    check = mkdir(pathname, 0777);
+    if (mkdir(pathname, 0777) == -1)
+    {
+         mkdir(pathname, 0777);
+    }
+    
+    /* if check == 0 directory created succesfully else (-1) failed */
     
     return 0;
 }
