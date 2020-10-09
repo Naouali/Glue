@@ -25,5 +25,4 @@ char * create_dir_name(char *dest, char *source)
     dest[i] = '\0';
 
     return (dest);
-
 }
