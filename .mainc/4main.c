@@ -11,7 +11,7 @@ int main(int argc, char **argv)
     char *snapname;
     char *hold;
     char *hold2;
-    char *dirname = malloc(sizeof(char) * strlen(filename) * 2);
+    char *dirname = malloc(sizeof(char) * 100);
     /* path = directory name / snape name */
     snapname = create_dir_name(hold, filename);
     /* create directory with same name as filename */

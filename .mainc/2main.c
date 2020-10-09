@@ -11,7 +11,6 @@ int main(int argc, char **argv)
     char *snapname;
     char *hold;
     char *hold2;
-    char *dirname = malloc(sizeof(char) * strlen(filename) * 2);
     /* path = directory name / snape name */
     snapname = create_dir_name(hold, filename);
     /* create directory with same name as filename */
@@ -19,7 +18,6 @@ int main(int argc, char **argv)
     /* take snap/copy an put it inthe directory */
     copy(filename, snapname);
     /*//////////////////////////////////////////////*/
-    dirname = gen_fullpath(filename, 1, hold);
-    printf("%s\n", dirname);
+    
     return (0);
 }

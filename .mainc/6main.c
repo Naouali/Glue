@@ -21,5 +21,6 @@ int main(int argc, char **argv)
     /*//////////////////////////////////////////////*/
     dirname = gen_fullpath(filename, 1, hold);
     printf("%s\n", dirname);
+    free(dirname);
     return (0);
 }
