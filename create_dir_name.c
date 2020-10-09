@@ -8,7 +8,7 @@
  * return: new trancated name
  */
 
-char * trancat(char *dest, char *source)
+char * create_dir_name(char *dest, char *source)
 {
     
     int i;

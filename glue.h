@@ -10,7 +10,7 @@
 #include <string.h>
 void copy(char *filename, char *pathame);
 int make_dir(char *pathname);
-char * trancat(char *dest, char *source);
+char * create_dir_name(char *dest, char *source);
 char *concate(char *first, char *second);
 char *my_itoa(int num, char *str);
 char *gen_dirname(char *hold_var, char *filename);
