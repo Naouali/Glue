@@ -17,7 +17,7 @@ void copy_file(char *filename)
     FILE * copied_file; /* the copie of the file */
     char c; /* character to hold characters in the original file and output them in the copie */
     char *dir; /* the path in which the copie should be stored, wil be created using a function */
-    char *pathname = malloc(sizeof(char) * strlen(filename) * 2);
+    char *pathname;
     original_file = fopen(filename, "r"); /* open the original file in the read mode */
     /* first generated the path name and then create a directory with this name if not exists */
     // generate path name = directory name
@@ -34,6 +34,7 @@ void copy_file(char *filename)
     {
         fputc(c, copied_file);
     }
+    free(dir);
     fclose(original_file); /* close the origian file */
     fclose(copied_file); /* close the copied file */
 }

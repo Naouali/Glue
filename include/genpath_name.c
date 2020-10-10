@@ -15,7 +15,7 @@ char *genpath_name(char *filename)
     /* if file already exis, copies should be indexed */
     int i;
     int j = 1;
-    char *path = malloc(sizeof(char) * strlen(filename) + 2);
+    char *path = malloc(sizeof(char) * strlen(filename) * 2);
     if (path == NULL)
     {
         printf("Failed th allocate memory to path");
