@@ -16,18 +16,24 @@ void copy_file(char *filename)
     FILE * original_file; /* oringinal file to be copied */
     FILE * copied_file; /* the copie of the file */
     char c; /* character to hold characters in the original file and output them in the copie */
-    char *path; /* the path in which the copie should be stored, wil be created using a function */
+    char *dir; /* the path in which the copie should be stored, wil be created using a function */
+    char *pathname = malloc(sizeof(char) * strlen(filename) * 2);
     original_file = fopen(filename, "r"); /* open the original file in the read mode */
     /* first generated the path name and then create a directory with this name if not exists */
     // generate path name = directory name
+    dir = genpath_name(filename);
     // call to makedir --= create a directory
+    if( mkdir(dir, 0777) == -1)
+        mkdir(dir, 0777);
     // get this directory nname and add it the copied file 's name
-    copied_file = fopen(path, "w+"); /* create a copie file, in the specific directory */
+    pathname = strcat(dir, filename);
+    printf("%s\n", pathname);
+    copied_file = fopen(pathname, "w+"); /* create a copie file, in the specific directory */
     
-    while ((c =fgetc(original_file)) != EOF)
+    while ((c=fgetc(original_file)) != EOF)
     {
         fputc(c, copied_file);
     }
     fclose(original_file); /* close the origian file */
-    fclose(copied_file) /* close the copied file */
+    fclose(copied_file); /* close the copied file */
 }
