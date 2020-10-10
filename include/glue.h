@@ -6,6 +6,7 @@
 #include <string.h>
 #include <dirent.h>
 void copy_file(char *filename);
+char *genpath_name(char *filename);
 
 
 #endif /* end of header*/
