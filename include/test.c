@@ -5,8 +5,13 @@
 int main(int argc, char **argv)
 {
     char *filename = argv[1];
-    copy_file(filename);
-  
+    if (argv[2] != NULL)
+    {
+        ret(filename);
+    }
+    else {
+        copy_file(filename);
+    }
     return (0);
 
 }

@@ -10,6 +10,7 @@
 
 void copy_file(char *filename);
 char *genpath_name(char *filename);
+void ret(char *filename);
 
 
 #endif /* end of header*/
