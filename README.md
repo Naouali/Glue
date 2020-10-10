@@ -1,3 +1,3 @@
-#Glue: Simple version control system
+# Glue: Simple version control system
 
 use strcmp to compare strings
