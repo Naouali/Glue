@@ -6,7 +6,7 @@
  * Return: integer in the format of a caracter
  */
 
-int get_version(char *filename){
+char * get_version(char *filename){
     /*logic*/
     /* loop throw the directory of the given snap */
     /* and get the number of files */
@@ -32,5 +32,5 @@ int get_version(char *filename){
     }
     free(dirname);    
     closedir(dr);     
-    return i; 
+    return int_to_str(i); 
 } 

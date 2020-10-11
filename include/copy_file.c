@@ -19,6 +19,8 @@ void copy_file(char *filename)
     char *dir; /* the path in which the copie should be stored, wil be created using a function */
     char *pathname; /* name of the full path */
     original_file = fopen(filename, "r"); /* open the original file in the read mode */
+    char *version;
+    char *ver_file;
     /* first generated the path name and then create a directory with this name if not exists */
     // generate path name = directory name
     dir = genpath_name(filename);
@@ -26,7 +28,9 @@ void copy_file(char *filename)
     if( mkdir(dir, 0777) == -1)
         mkdir(dir, 0777);
     // get this directory nname and add it the copied file 's name
-    pathname = strcat(dir, filename);
+    version = get_version(filename);
+    ver_file = strcat(version, filename);
+    pathname = strcat(dir, ver_file);
     printf("%s\n", pathname);
     copied_file = fopen(pathname, "w+"); /* create a copie file, in the specific directory */
     

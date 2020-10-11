@@ -11,6 +11,7 @@
 void copy_file(char *filename);
 char *genpath_name(char *filename);
 void ret(char *filename);
-int get_version(char *filename);
+char * get_version(char *filename);
+char *int_to_str(int n);
 
 #endif /* end of header*/
