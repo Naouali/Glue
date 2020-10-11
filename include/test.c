@@ -5,7 +5,9 @@
 int main(int argc, char **argv)
 {
     char *filename = argv[1];
-    if (argv[2] != NULL)
+    int check;
+    check = strcmp(argv[2], "ret");
+    if (check == 0)
     {
         ret(filename);
     }
