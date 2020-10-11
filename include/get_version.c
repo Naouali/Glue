@@ -30,7 +30,7 @@ int get_version(char *filename){
         if (strcmp(de->d_name, ".") != 0 && strcmp(de->d_name, "..") != 0)
             i++; 
     }
-            
+    free(dirname);    
     closedir(dr);     
     return i; 
 } 
