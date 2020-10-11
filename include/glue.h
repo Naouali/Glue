@@ -10,7 +10,7 @@
 
 void copy_file(char *filename);
 char *genpath_name(char *filename);
-void ret(char *filename);
+void ret(char *filename, char *version);
 char * get_version(char *filename);
 char *int_to_str(int n);
 

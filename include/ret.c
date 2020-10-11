@@ -7,7 +7,7 @@
  * Return: void
  */
 
-void ret(char *filename)
+void ret(char *filename, char *version)
 {
     /*file is copied to a hidden file
     with the same name as the file in the current directory
@@ -18,11 +18,13 @@ void ret(char *filename)
     char c; /* character to hold characters in the original file and output them in the copie */
     char *dir; /* the path in which the copie should be stored, wil be created using a function */
     char *pathname; /* name of the full path */
+    char *ver_file;
     /*get dir name from, file name*/
     dir = genpath_name(filename);
+    /*add version to file */
+    ver_file = strcat(version, filename);
     /*get full path from dirname and filename*/
-    pathname = strcat(dir, filename);
-
+    pathname = strcat(dir, ver_file);
 
     original_file = fopen(pathname, "r"); /* open the original file in the read mode */
     /* first generated the path name and then create a directory with this name if not exists */
